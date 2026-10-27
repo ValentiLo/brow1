@@ -1,0 +1,499 @@
+   /* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f1ea; /* Светло-кремовый фон */
+    font-family: 'Montserrat', sans-serif;
+    color: #1e2d3b; /* Темно-синий цвет текста */
+}
+
+/* Основной контейнер шапки */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* --- Логотип --- */
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: #1e2d3b;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.logo-number {
+    font-size: 20px;
+    margin-left: 2px;
+    margin-top: 5px;
+}
+
+/* --- Навигация --- */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px; /* Расстояние между ссылками */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #1e2d3b;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Подчеркивание для активного пункта и при наведении */
+.nav a.active::after,
+.nav a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #1e2d3b;
+}
+
+/* --- Контакты --- */
+.contacts {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.phone-info {
+    text-align: right;
+}
+
+.phone {
+    display: block;
+    text-decoration: none;
+    color: #1e2d3b;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.address {
+    font-size: 12px;
+    color: #4a5b6d;
+    line-height: 1.3;
+}
+
+/* --- Кнопки соцсетей --- */
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.social-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #1e2d3b;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border: 1px solid #1e2d3b;
+    border-radius: 20px; /* Овальные кнопки */
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: #1e2d3b;
+    color: #f4f1ea;
+}
+        /* Базовые настройки */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Контейнер для карточек товаров */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Базовые стили карточки товара */
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            border: #fb9ce2 solid 5px;
+            outline: #284d60 dashed ;
+        }
+
+        /* Картинка */
+        .product-card__image {
+            margin: 0;
+            width: 100%;
+            height: 200px; /* Фиксированная высота, чтобы карточки были ровными */
+            background: #eaeaea;
+            overflow: hidden;
+        }
+        .product-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Картинка заполняет блок без искажений */
+            display: block;
+        }
+
+        /* Контентная часть */
+        .product-card__content {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Растягивает контент, чтобы футер был прижат к низу */
+        }
+
+        .product-card__title {
+            margin: 0 0 8px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .product-card__description {
+            margin: 0 0 16px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Футер с ценой и кнопкой */
+        .product-card__footer {
+            margin-top: auto; /* Прижимает футер к низу карточки */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .product-card__price {
+            font-size: 18px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        /* Стили для кнопки (и ссылки, оформленной как кнопка) */
+.product-card__button {
+    display: inline-block; /* Важно для ссылок, чтобы они вели себя как кнопки */
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    text-align: center;
+    background-color: #284d60;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    
+    /* Плавный переход для всех изменяемых свойств */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку/ссылку */
+.product-card__button:hover {
+    background-color: #fb9ce2; /* Светлый фон (как у body) */
+    color: #284d60; /* Темно-синий текст */
+    transform: scale(1.05); /* Увеличение на 5% */
+}
+
+        /* --- Медиа-запросы --- */
+
+        /* Для планшетов */
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .product-card__content {
+                padding: 12px;
+            }
+            .product-card__title {
+                font-size: 16px;
+            }
+            .product-card__description {
+                font-size: 13px;
+            }
+        }
+
+        /* Для мобильных устройств */
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                padding: 12px;
+            }
+            .product-card {
+                flex-direction: row;
+                height: 140px;
+                border-radius: 8px;
+            }
+            .product-card__image {
+                width: 40%;
+                height: 100%;
+                flex-shrink: 0;
+            }
+            .product-card__content {
+                width: 60%;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+            .product-card__description {
+                display: none; /* Скрываем описание на мобильных */
+            }
+            .product-card__title {
+                font-size: 15px;
+                margin-bottom: 4px;
+            }
+            .product-card__footer {
+                margin-top: auto;
+                flex-wrap: wrap; /* Разрешаем перенос, если не влезает */
+                gap: 5px;
+            }
+            .product-card__price {
+                font-size: 15px;
+            }
+            .product-card__button {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+        }
+        /* --- Стили для страницы отдельной услуги --- */
+
+.service-page {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Контейнер, который делит экран на 60% и 40% */
+.service-container {
+    display: flex;
+    gap: 40px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+}
+
+/* Левая часть с фото (60%) */
+.service-image-wrapper {
+    flex: 0 0 60%;
+    width: 60%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Правая часть с текстом (40%) */
+.service-info {
+    flex: 0 0 calc(40% - 40px); /* Вычитаем gap */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #1e2d3b;
+    margin-bottom: 10px;
+}
+
+.service-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #284d60;
+    margin-bottom: 20px;
+}
+
+.service-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a5b6d;
+    margin-bottom: 20px;
+}
+
+.service-subtitle {
+    font-size: 18px;
+    color: #1e2d3b;
+    margin-bottom: 10px;
+}
+
+.service-list {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    color: #4a5b6d;
+    line-height: 1.6;
+}
+
+.service-btn {
+    align-self: flex-start; /* Кнопка не растягивается на всю ширину */
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* Адаптивность для страницы услуги (на телефонах) */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column; /* Ставим фото и текст друг под другом */
+        padding: 15px;
+    }
+    
+    .service-image-wrapper {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 300px; /* Ограничиваем высоту фото на мобильных */
+    }
+    
+    .service-info {
+        flex: 0 0 100%;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .service-title {
+        font-size: 24px;
+    }
+}
+/* --- АДАПТИВНОСТЬ ДЛЯ ШАПКИ (HEADER) --- */
+@media (max-width: 1024px) {
+    .header {
+        flex-wrap: wrap; /* Разрешаем перенос элементов */
+        gap: 20px;
+        padding: 15px 20px;
+    }
+    .nav ul {
+        gap: 20px;
+    }
+    .contacts {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Элементы шапки встают друг под другом */
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .nav ul {
+        flex-wrap: wrap; /* Ссылки меню могут переноситься */
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .contacts {
+        flex-direction: column; /* Телефон и соцсети друг под другом */
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .phone-info {
+        text-align: center; /* Выравниваем телефон по центру */
+    }
+    
+    .socials {
+        justify-content: center;
+    }
+}
+
+/* --- АДАПТИВНОСТЬ ДЛЯ СТРАНИЦ УСЛУГ (SERVICE PAGE) --- */
+@media (max-width: 992px) {
+    .service-container {
+        gap: 20px;
+        padding: 20px;
+    }
+    .service-title {
+        font-size: 26px;
+    }
+    .service-price {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .service-description {
+        font-size: 15px;
+    }
+    .service-list {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-page {
+        padding: 20px 15px;
+    }
+
+    .service-container {
+        flex-direction: column; /* Фото сверху, текст снизу */
+        padding: 15px;
+    }
+    
+    .service-image-wrapper {
+        flex: 0 0 100%;
+        width: 100%;
+        height: auto;
+        max-height: 400px; /* Ограничиваем высоту фото на мобильных */
+    }
+    
+    .service-img {
+        height: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+    
+    .service-info {
+        flex: 0 0 100%;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .service-title {
+        font-size: 24px;
+    }
+
+    .service-btn {
+        width: 100%; /* Кнопка на всю ширину на мобильных (удобнее нажимать) */
+        text-align: center;
+    }
+}
